@@ -1,0 +1,30 @@
+package com.deloitte.employee;
+
+import java.util.Scanner;
+
+public class EmployeeDemo {
+
+	public static void main(String args[]) {
+		
+		Scanner scr=new Scanner(System.in);
+		System.out.println("Enter a name");
+		String name=scr.next();
+		
+		Employee emp1 = new Employee();
+		emp1.setDeptId("AA");
+		/*emp1.setEmpId(101);*/
+		emp1.setEmpName =("Sumit");
+		emp1.setSalary = 20000;
+
+		/*Employee emp2 = new Employee(102, "Zinat", 25000.0, "AC");
+	
+		System.out.println(emp2.getEmpId());
+		System.out.println(emp2.getEmpName());
+		System.out.println(emp2.getDeptId());
+		System.out.println(emp2.getSalary());*/
+		System.out.println(emp1.getEmpId());
+		emp1.nameValidation(name);
+		scr.close();
+	}
+
+}
