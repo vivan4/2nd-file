@@ -1,33 +1,122 @@
-package com.deloitte.employee;
+package com.nexwave;
 
-import java.util.Scanner;
+public class Classroom {
+	
+	static int count;
 
-public class EmployeeDemo {
+	private String name;
 
-	public static void main(String args[]) {
+	private int Classid;
 
-		Scanner scr = new Scanner(System.in);
-		System.out.println("Enter a name");
-		String name = scr.next();
-		boolean nameFlag = utility.nameValidation(name);
-		String salary = scr.next();
-		boolean salaryFlag = utility.salaryValidation(salary);
-		if (nameFlag && salaryFlag) {
-			Employee emp1 = new Employee();
-			emp1.setDeptId("AA");
-			emp1.setEmpId(101);
-			emp1.setSalary(Double.parseDouble(salary));
-			emp1.setEmpName(name);
+	private int system;
 
-		}
+	private boolean projector;
 
-		/*
-		 * Employee emp2 = new Employee(102, "Zinat", 25000.0, "AC");
-		 * 
-		 * System.out.println(emp2.getEmpId()); System.out.println(emp2.getEmpName());
-		 * System.out.println(emp2.getDeptId()); System.out.println(emp2.getSalary());
-		 */
-		scr.close();
+	private boolean ac;
+
+	private String faculty;
+
+	private boolean availablity;
+	
+
+	public Classroom() {
+		super();
+		count++;
+	}
+
+	public String getName() {
+
+		return name;
+
+	}
+
+	public void setName(String name) {
+
+		this.name = name;
+
+	}
+
+	public int getClassid() {
+
+		return Classid;
+
+	}
+
+	public void setClassid(int Classid) {
+
+		this.Classid = Classid;
+
+	}
+
+	public int getSystem() {
+
+		return system;
+
+	}
+
+	public void setSystem(int system) {
+
+		this.system = system;
+
+	}
+
+	public boolean isProjector() {
+
+		return projector;
+
+	}
+
+	public void setProjector(boolean projector) {
+
+		this.projector = projector;
+
+	}
+
+	public boolean isAc() {
+
+		return ac;
+
+	}
+
+	public void setAc(boolean ac) {
+
+		this.ac = ac;
+
+	}
+
+	public String getFaculty() {
+
+		return faculty;
+
+	}
+
+	public void setFaculty(String faculty) {
+
+		this.faculty = faculty;
+
+	}
+
+	public boolean isAvailablity() {
+
+		return availablity;
+
+	}
+
+	public void setAvailablity(boolean availablity) {
+
+		this.availablity = availablity;
+
+	}
+	
+
+	@Override
+
+	public String toString() {
+
+		return "Classroom [name=" + name + ", Classid=" + Classid + ", system=" + system + ", projector=" + projector
+
+				+ ", ac=" + ac + ", faculty=" + faculty + ", availablity=" + availablity + "]";
+
 	}
 
 }
