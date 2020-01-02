@@ -1,0 +1,46 @@
+
+
+public class Classroomimpl implements Interface1 {
+
+	@Override
+	public Classroom addRooms(int Classid, String name, int system, boolean projector, boolean ac, boolean availablity,
+			String faculty) {
+		Classroom cx = new Classroom();
+
+		cx.setAc(ac);
+
+		cx.setClassid(Classid);
+
+		cx.setFaculty(faculty);
+
+		cx.setAvailablity(true);
+
+		cx.setName(name);
+
+		cx.setSystem(system);
+
+		cx.setProjector(projector);
+
+		return (cx);
+
+	}
+
+	@Override
+	public Classroom searchRooms(int roomId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void allocateRoom(int system) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Classroom[] displayAllClassroom() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
