@@ -1,8 +1,9 @@
-
+package com.nexwave;
 
 public class Classroomimpl implements Interface1 {
 
 	@Override
+	
 	public Classroom addRooms(int Classid, String name, int system, boolean projector, boolean ac, boolean availablity,
 			String faculty) {
 		Classroom cx = new Classroom();
@@ -43,4 +44,20 @@ public class Classroomimpl implements Interface1 {
 		return null;
 	}
 
+	@Override
+	public boolean validate(String username, String password) {
+		// TODO Auto-generated method stub
+		
+		if (username.equals("admin")&& password.equals("admin"))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+		
+	}
+	
+	
 }
