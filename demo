@@ -1,0 +1,152 @@
+
+
+import java.util.*;
+
+public class DemoClass {
+
+	public static void main(String args[]) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter no of classes");
+
+		String x = sc.next();
+
+		ArrayList<Classroom> list = new ArrayList<Classroom>();
+
+		Classroomimpl mainObj = new Classroomimpl();
+
+		int m = 1;
+		int y = 0;
+
+		while (true)
+
+		{
+
+			System.out.println("Enter your choice of work : 1 for add new room ");
+
+			System.out.println(" 2 for searching  room ");
+
+			System.out.println("3 to display all rooms");
+
+			System.out.println("4 to allocate room");
+
+			System.out.println("5 to exit the application");
+			
+			System.out.println("6 to login");
+			
+			System.out.println("7 to Password");
+			
+
+			y = sc.nextInt();
+
+			switch (y) {
+
+			case 1: {
+				System.out.println("Enter classid");
+				int Classid = sc.nextInt();
+				System.out.println("Enter name ");
+				String name = sc.next();
+				System.out.println("Enter no of system ");
+				int system = sc.nextInt();
+				System.out.println("Enter projector details");
+				boolean projector = sc.nextBoolean();
+				System.out.println("Enter AC details");
+				boolean ac = sc.nextBoolean();
+				System.out.println("Enter availablity details");
+				boolean availablity = sc.nextBoolean();
+				System.out.println("Enter Faculty details");
+				String faculty = sc.next();
+				
+				list.add(mainObj.addRooms(Classid, name, system, projector, ac, availablity, faculty));
+
+			}
+
+				break;
+
+			case 2: {
+				System.out.println("Enter classid to search details");
+
+				int ch = sc.nextInt();
+
+				for (Classroom p : list)
+
+				{
+					if (ch == p.getClassid())
+
+						System.out.println("Room Found" + p);
+
+				}
+
+			}
+
+			case 3: {
+				System.out.println("No of rooms : " + Classroom.count);
+				break;
+			}
+
+			case 4: {
+
+				System.out.println("Enter required no of systems");
+
+				int req = sc.nextInt();
+
+				int avail = 0;
+
+				for (Classroom k : list)
+
+				{
+
+					if ((k.getSystem() >= req) && (k.isAvailablity() == true))
+
+					{
+
+						System.out.println("Room is available" + k.getName());
+
+						System.out.println("Room Allotted");
+
+						System.out.println("Enter faculty name");
+
+						k.setFaculty(sc.next());
+
+						k.setAvailablity(false);
+
+						System.out.println(k);
+
+						avail = 1;
+
+						break;
+
+					}
+
+				}
+
+				if (avail == 0)
+
+					System.out.println("No Room is available");
+
+			}
+
+			case 5:
+
+			{
+
+				System.out.println("wantmore operation : 1 for yes 2 for no?");
+
+				m = sc.nextInt();
+
+				System.exit(0);
+			}
+			
+			case 6 :
+			{
+				
+			}
+
+			}
+
+		}
+
+	}
+
+}
