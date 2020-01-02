@@ -1,0 +1,149 @@
+public class Classroom {
+
+	static int count;
+
+	private String name;
+
+	private int Classid;
+
+	private int system;
+
+	private boolean projector;
+
+	private boolean ac;
+
+	private String faculty;
+
+	private boolean availablity;
+	
+	private String username;
+	
+	private String password;
+
+	static {
+		count = 0;
+	}
+
+	public Classroom() {
+		count++;
+
+	}
+
+	public String getName() {
+
+		return name;
+
+	}
+
+	public void setName(String name) {
+
+		this.name = name;
+
+	}
+
+	public int getClassid() {
+
+		return Classid;
+
+	}
+
+	public void setClassid(int Classid) {
+
+		this.Classid = Classid;
+
+	}
+
+	public int getSystem() {
+
+		return system;
+
+	}
+
+	public void setSystem(int system) {
+
+		this.system = system;
+
+	}
+
+	public boolean isProjector() {
+
+		return projector;
+
+	}
+
+	public void setProjector(boolean projector) {
+
+		this.projector = projector;
+
+	}
+
+	public boolean isAc() {
+
+		return ac;
+
+	}
+
+	public void setAc(boolean ac) {
+
+		this.ac = ac;
+
+	}
+
+	public String getFaculty() {
+
+		return faculty;
+
+	}
+
+	public void setFaculty(String faculty) {
+
+		this.faculty = faculty;
+
+	}
+
+	public boolean isAvailablity() {
+
+		return availablity;
+
+	}
+
+	public void setAvailablity(boolean availablity) {
+
+		this.availablity = availablity;
+
+	}
+	public String getUsername() {
+
+		return username;
+
+	}
+
+	public void setUserame(String username) {
+
+		this.username = username;
+
+	}
+	public String getPassword() {
+
+		return password;
+
+	}
+
+	public void setPassword(String password) {
+
+		this.password = password;
+
+	}
+
+
+	@Override
+
+	public String toString() {
+
+		return "Classroom [name=" + name + ", Classid=" + Classid + ", system=" + system + ", projector=" + projector
+
+				+ ", ac=" + ac + ", faculty=" + faculty + ", availablity=" + availablity + ", username=" + username +", password=" + password +"]";
+
+	}
+
+}
