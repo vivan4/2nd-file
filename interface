@@ -1,14 +1,15 @@
-
+package com.nexwave;
 
 public interface Interface1 {
 
 	public Classroom addRooms(int Classid, String name, int system, boolean projector, boolean ac, boolean availablity,
-			String faculty, String username, String password);
+			String faculty);
 
 	public Classroom searchRooms(int roomId);
 
 	public void allocateRoom(int system);
 
 	public Classroom[] displayAllClassroom();
+	public boolean validate(String username, String password);
 
 }
